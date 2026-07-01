@@ -1,0 +1,76 @@
+Complete Flow of Your App
+
+When the app launches:
+
+                    Recipe_ManagerApp.swift
+                            │
+                            ▼
+                    SplashScreen.swift
+                            │
+                            ▼
+                    HomeView.swift
+                            │
+                            ▼
+                    RecipeManager.swift
+                            │
+                            ▼
+                    Recipe.swift
+                    
+
+1. Recipe_ManagerApp.swift : This is the entry point of the application. Without this file, the app cannot start.
+        Connected With -
+            Recipe_ManagerApp
+
+                ↓
+
+            SplashScreen
+
+Only one connection.
+
+2. SplashScreen.swift : It exists only for a few seconds.Shows Logo, Animation, Loading, Navigate to HomeView.
+
+3. HomeView.swift : This is the heart of the UI. Almost everything starts here.It communicates with RecipeManager using @StateObject  because HomeView owns the data. Responsibilities:
+
+                    ✅ Display all recipes
+
+                    ✅ Search recipes
+
+                    ✅ Delete recipes
+
+                    ✅ Navigate to details
+
+                    ✅ Open Add Recipe screen
+
+Diagram
+
+HomeView
+
+│
+
+├── RecipeCardView
+
+├── AddRecipeView
+
+└── RecipeDetailView
+
+This is your main screen.
+
+
+4. RecipeCardView.swift : Think of this as a reusable card. Instead of writing- Image, Title, Category, Time, Heart, inside HomeView again and again, we created  RecipeCardView So HomeView does :
+                                    RecipeCardView(recipe: recipe) 100 times.
+                                    
+
+//-------------------------------------------------------------------------------------------------------------------------------//
+
+Project follows CRUD Operations :
+
+CRUD Operation   --    Where it Happens
+Create  --              AddRecipeView → RecipeManager.addRecipe() adds a new recipe.
+Read    --              HomeView displays all recipes and RecipeDetailView displays a selected recipe.
+Update  --              toggleFavorite() in RecipeManager updates the isFavorite property of a recipe.
+Delete  --              Swipe-to-delete in HomeView calls deleteRecipe() in RecipeManager.
+
+
+//--------------------------------------------------------------------------------------------------------------------------------//
+
+
