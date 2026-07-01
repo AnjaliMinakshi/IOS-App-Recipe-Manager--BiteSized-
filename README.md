@@ -25,7 +25,7 @@ A modern Recipe Manager application built using **SwiftUI** following the **MVVM
 ## 🏗️ Project Architecture
 
 The project follows the **MVVM Architecture**.
-
+```
 Recipe Manager
 │
 ├── Models
@@ -51,7 +51,7 @@ Recipe Manager
 │      String+Extension.swift
 │
 └── Recipe_ManagerApp.swift
-
+```
 
 ---
 
@@ -127,6 +127,10 @@ Recipe Manager
 
 ## 📸 Screenshots
 
+
+Splash Screen
+<img width="280" height="578" alt="Screenshot 2026-07-01 at 6 09 04 PM" src="https://github.com/user-attachments/assets/0da9fb06-3586-4d61-ab31-fa7441b84fd1" />
+
 Home Screen
 <img width="283" height="575" alt="Screenshot 2026-07-01 at 6 03 56 PM" src="https://github.com/user-attachments/assets/ecc3d3f4-200d-40c0-9d25-cee0e9c3b4e2" />
 
@@ -139,8 +143,7 @@ Recipe Detail Screen
 Removing Recipe
 <img width="280" height="577" alt="Screenshot 2026-07-01 at 6 06 02 PM" src="https://github.com/user-attachments/assets/233ab0eb-b706-45b3-a9dd-8417a47283f8" />
 
-Splash Screen
-<img width="280" height="578" alt="Screenshot 2026-07-01 at 6 09 04 PM" src="https://github.com/user-attachments/assets/0da9fb06-3586-4d61-ab31-fa7441b84fd1" />
+
 
 ---
 
